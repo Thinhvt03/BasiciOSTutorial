@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ScrollZoomImage" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ait-BD-OaX">
+                                <rect key="frame" x="0.0" y="59" width="393" height="759"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Gcs-1m-ItH">
+                                        <rect key="frame" x="8" y="263" width="377" height="233"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="233" id="jtn-Ry-xfE"/>
+                                            <constraint firstAttribute="width" constant="377" id="xEP-hy-pXs"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="Gcs-1m-ItH" secondAttribute="bottom" constant="263" id="7gv-7o-8qw"/>
+                                    <constraint firstItem="Gcs-1m-ItH" firstAttribute="centerY" secondItem="Ait-BD-OaX" secondAttribute="centerY" id="MWa-QH-7Mf"/>
+                                    <constraint firstItem="Gcs-1m-ItH" firstAttribute="trailing" secondItem="Ait-BD-OaX" secondAttribute="trailingMargin" id="QKf-Cb-MQV"/>
+                                    <constraint firstItem="Gcs-1m-ItH" firstAttribute="centerX" secondItem="Ait-BD-OaX" secondAttribute="centerX" id="dZ6-h6-a5c"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Ait-BD-OaX" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="19y-Ph-Qys"/>
+                            <constraint firstItem="Ait-BD-OaX" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="6VE-c1-1Jr"/>
+                            <constraint firstItem="Ait-BD-OaX" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="bKf-Wg-08a"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Ait-BD-OaX" secondAttribute="trailing" id="hvd-r7-4lh"/>
+                            <constraint firstItem="Ait-BD-OaX" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="uQL-fK-bcE"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="Gcs-1m-ItH" id="0Ae-Qh-3hb"/>
+                        <outlet property="scrollView" destination="Ait-BD-OaX" id="acI-rf-12F"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.64122137404578" y="3.5211267605633805"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

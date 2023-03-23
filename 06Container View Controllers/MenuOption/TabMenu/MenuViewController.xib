@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina5_9" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MenuViewController" customModule="TabMenu" customModuleProvider="target">
+            <connections>
+                <outlet property="navigationTitle" destination="1zG-Mq-Bls" id="3kM-e4-V50"/>
+                <outlet property="tableViewHeight" destination="qaf-Wk-8MW" id="vsY-0B-zI0"/>
+                <outlet property="tableViewOfMenu" destination="6Gx-J3-4aV" id="E07-pQ-Cvy"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outlet property="viewOfContainer" destination="6Sm-Ur-Edf" id="3LH-2d-JyK"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bMo-Kc-EKB">
+                    <rect key="frame" x="0.0" y="38" width="375" height="44"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="44" id="sOA-Dy-fTa"/>
+                    </constraints>
+                    <items>
+                        <navigationItem title="Title" id="1zG-Mq-Bls">
+                            <barButtonItem key="leftBarButtonItem" title="Menu" id="CHW-Uo-pkW">
+                                <connections>
+                                    <action selector="DidButtonMenu:" destination="-1" id="oLh-3t-B3Z"/>
+                                </connections>
+                            </barButtonItem>
+                        </navigationItem>
+                    </items>
+                </navigationBar>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6Sm-Ur-Edf">
+                    <rect key="frame" x="0.0" y="82" width="375" height="696"/>
+                    <color key="backgroundColor" systemColor="systemGreenColor"/>
+                </view>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="6Gx-J3-4aV">
+                    <rect key="frame" x="0.0" y="82" width="187.66666666666666" height="200"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="200" id="qaf-Wk-8MW"/>
+                    </constraints>
+                </tableView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="6Sm-Ur-Edf" firstAttribute="top" secondItem="bMo-Kc-EKB" secondAttribute="bottom" id="0LV-wj-o4T"/>
+                <constraint firstItem="bMo-Kc-EKB" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="0gJ-Z8-HO3"/>
+                <constraint firstItem="6Gx-J3-4aV" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="8WJ-q7-2k9"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="6Sm-Ur-Edf" secondAttribute="trailing" id="9da-n6-X25"/>
+                <constraint firstItem="6Gx-J3-4aV" firstAttribute="top" secondItem="bMo-Kc-EKB" secondAttribute="bottom" id="Rv2-s9-Nzk"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="6Sm-Ur-Edf" secondAttribute="bottom" id="S1a-qz-8YB"/>
+                <constraint firstItem="6Gx-J3-4aV" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" multiplier="1/2" id="htE-PK-0yJ"/>
+                <constraint firstItem="bMo-Kc-EKB" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="m3B-HV-n9a"/>
+                <constraint firstItem="6Sm-Ur-Edf" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="uVp-t4-eRb"/>
+                <constraint firstItem="bMo-Kc-EKB" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="38" id="zBh-DO-gOt"/>
+            </constraints>
+            <point key="canvasLocation" x="102" y="20"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
